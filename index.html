@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    </meta>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    </meta>
+    <title>Translation App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    </meta>
+    <!-- icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    </link>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <!-- css -->
+    <link rel="stylesheet" type="text/css" href="main.css">
+    </link>
+</head>
+
+<body>
+    <div class="form-check form-switch check-box">
+        <input class="form-check-input check" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+        <label class="form-check-label" for="flexSwitchCheckChecked">Light <i class="bi bi-sun-fill"></i></label>
+    </div>
+
+    <h1 class="center">Translation App</h1>
+    <p class="center">You Can Translate Any Language</p>
+
+    <form onsubmit="translateText(event)">
+        <row-nogap>
+            <textarea id="user-input" class="input-1" placeholder="From"></textarea>
+            <p id="user-output" class="input-2 icon"><i style="color: #9b9b9b; font-style: normal;">To</i></p>
+        </row-nogap>
+        <row>
+            <h3 class="bi bi-clipboard icon none"></h3>
+            <select id="source-language">
+        <option value="en-GB" selected>English</option>
+        <option value="ur-PK">Urdu</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="fr-FR">French</option>
+<option value="es-ES">Spanish</option>
+<option value="ar-SA">Arabic</option>
+<option value="am-ET">Amharic</option>
+<option value="be-BY">Bielarus</option>
+<option value="bem-ZM">Bemba</option>
+<option value="bi-VU">Bislama</option>
+<option value="bjs-BB">Bajan</option>
+<option value="bn-IN">Bengali</option>
+<option value="bo-CN">Tibetan</option>
+<option value="br-FR">Breton</option>
+<option value="bs-BA">Bosnian</option>
+<option value="ca-ES">Catalan</option>
+<option value="cop-EG">Coptic</option>
+<option value="cs-CZ">Czech</option>
+<option value="cy-GB">Welsh</option>
+<option value="da-DK">Danish</option>
+<option value="dz-BT">Dzongkha</option>
+<option value="de-DE">German</option>
+<option value="dv-MV">Maldivian</option>
+<option value="el-GR">Greek</option>
+<option value="et-EE">Estonian</option>
+<option value="eu-ES">Basque</option>
+<option value="fa-IR">Persian</option>
+<option value="fi-FI">Finnish</option>
+<option value="fn-FNG">Fanagalo</option>
+<option value="fo-FO">Faroese</option>
+<option value="gl-ES">Galician</option>
+<option value="gu-IN">Gujarati</option>
+<option value="ha-NE">Hausa</option>
+<option value="he-IL">Hebrew</option>
+<option value="hr-HR">Croatian</option>
+<option value="hu-HU">Hungarian</option>
+<option value="id-ID">Indonesian</option>
+<option value="is-IS">Icelandic</option>
+<option value="it-IT">Italian</option>
+<option value="ja-JP">Japanese</option>
+<option value="kk-KZ">Kazakh</option>
+<option value="km-KM">Khmer</option>
+<option value="kn-IN">Kannada</option>
+<option value="ko-KR">Korean</option>
+<option value="ku-TR">Kurdish</option>
+<option value="ky-KG">Kyrgyz</option>
+<option value="la-VA">Latin</option>
+<option value="lo-LA">Lao</option>
+<option value="lv-LV">Latvian</option>
+<option value="men-SL">Mende</option>
+<option value="mg-MG">Malagasy</option>
+<option value="mi-NZ">Maori</option>
+<option value="ms-MY">Malay</option>
+<option value="mt-MT">Maltese</option>
+<option value="my-MM">Burmese</option>
+<option value="ne-NP">Nepali</option>
+<option value="niu-NU">Niuean</option>
+<option value="nl-NL">Dutch</option>
+<option value="no-NO">Norwegian</option>
+<option value="ny-MW">Nyanja</option>
+<option value="pau-PW">Palauan</option>
+<option value="pa-IN">Punjabi</option>
+<option value="ps-PK">Pashto</option>
+<option value="pis-SB">Pijin</option>
+<option value="pl-PL">Polish</option>
+<option value="pt-PT">Portuguese</option>
+<option value="rn-BI">Kirundi</option>
+<option value="ro-RO">Romanian</option>
+<option value="ru-RU">Russian</option>
+<option value="sg-CF">Sango</option>
+<option value="si-LK">Sinhala</option>
+<option value="sk-SK">Slovak</option>
+<option value="sm-WS">Samoan</option>
+<option value="sn-ZW">Shona</option>
+<option value="so-SO">Somali</option>
+<option value="sq-AL">Albanian</option>
+<option value="sr-RS">Serbian</option>
+<option value="sv-SE">Swedish</option>
+<option value="sw-SZ">Swahili</option>
+<option value="ta-LK">Tamil</option>
+<option value="te-IN">Telugu</option>
+<option value="tet-TL">Tetum</option>
+<option value="tg-TJ">Tajik</option>
+<option value="th-TH">Thai</option>
+<option value="ti-TI">Tigrinya</option>
+<option value="tk-TM">Turkmen</option>
+<option value="tl-PH">Tagalog</option>
+<option value="tn-BW">Tswana</option>
+<option value="to-TO">Tongan</option>
+<option value="tr-TR">Turkish</option>
+<option value="uk-UA">Ukrainian</option>
+<option value="uz-UZ">Uzbek</option>
+<option value="vi-VN">Vietnamese</option>
+<option value="wo-SN">Wolof</option>
+<option value="xh-ZA">Xhosa</option>
+<option value="yi-YD">Yiddish</option>
+<option value="zu-ZA">Zulu</option>
+</select>
+
+            <h3 class="bi bi-arrow-left-right icon"></h3>
+
+            <select id="target-language">
+                <option value="en-GB">English</option>
+                <option value="ur-PK" selected>Urdu</option>
+                <option value="hi-IN">Hindi</option>
+                <option value="fr-FR">French</option>
+        <option value="es-ES">Spanish</option>
+        <option value="ar-SA">Arabic</option>
+        <option value="am-ET">Amharic</option>
+        <option value="be-BY">Bielarus</option>
+        <option value="bem-ZM">Bemba</option>
+        <option value="bi-VU">Bislama</option>
+        <option value="bjs-BB">Bajan</option>
+        <option value="bn-IN">Bengali</option>
+        <option value="bo-CN">Tibetan</option>
+        <option value="br-FR">Breton</option>
+        <option value="bs-BA">Bosnian</option>
+        <option value="ca-ES">Catalan</option>
+        <option value="cop-EG">Coptic</option>
+        <option value="cs-CZ">Czech</option>
+        <option value="cy-GB">Welsh</option>
+        <option value="da-DK">Danish</option>
+        <option value="dz-BT">Dzongkha</option>
+        <option value="de-DE">German</option>
+        <option value="dv-MV">Maldivian</option>
+        <option value="el-GR">Greek</option>
+        <option value="et-EE">Estonian</option>
+        <option value="eu-ES">Basque</option>
+        <option value="fa-IR">Persian</option>
+        <option value="fi-FI">Finnish</option>
+        <option value="fn-FNG">Fanagalo</option>
+        <option value="fo-FO">Faroese</option>
+        <option value="gl-ES">Galician</option>
+        <option value="gu-IN">Gujarati</option>
+        <option value="ha-NE">Hausa</option>
+        <option value="he-IL">Hebrew</option>
+        <option value="hr-HR">Croatian</option>
+        <option value="hu-HU">Hungarian</option>
+        <option value="id-ID">Indonesian</option>
+        <option value="is-IS">Icelandic</option>
+        <option value="it-IT">Italian</option>
+        <option value="ja-JP">Japanese</option>
+        <option value="kk-KZ">Kazakh</option>
+        <option value="km-KM">Khmer</option>
+        <option value="kn-IN">Kannada</option>
+        <option value="ko-KR">Korean</option>
+        <option value="ku-TR">Kurdish</option>
+        <option value="ky-KG">Kyrgyz</option>
+        <option value="la-VA">Latin</option>
+        <option value="lo-LA">Lao</option>
+        <option value="lv-LV">Latvian</option>
+        <option value="men-SL">Mende</option>
+        <option value="mg-MG">Malagasy</option>
+        <option value="mi-NZ">Maori</option>
+        <option value="ms-MY">Malay</option>
+        <option value="mt-MT">Maltese</option>
+        <option value="my-MM">Burmese</option>
+        <option value="ne-NP">Nepali</option>
+        <option value="niu-NU">Niuean</option>
+        <option value="nl-NL">Dutch</option>
+        <option value="no-NO">Norwegian</option>
+        <option value="ny-MW">Nyanja</option>
+        <option value="pau-PW">Palauan</option>
+        <option value="pa-IN">Punjabi</option>
+        <option value="ps-PK">Pashto</option>
+        <option value="pis-SB">Pijin</option>
+        <option value="pl-PL">Polish</option>
+        <option value="pt-PT">Portuguese</option>
+        <option value="rn-BI">Kirundi</option>
+        <option value="ro-RO">Romanian</option>
+        <option value="ru-RU">Russian</option>
+        <option value="sg-CF">Sango</option>
+        <option value="si-LK">Sinhala</option>
+        <option value="sk-SK">Slovak</option>
+        <option value="sm-WS">Samoan</option>
+        <option value="sn-ZW">Shona</option>
+        <option value="so-SO">Somali</option>
+        <option value="sq-AL">Albanian</option>
+        <option value="sr-RS">Serbian</option>
+        <option value="sv-SE">Swedish</option>
+        <option value="sw-SZ">Swahili</option>
+        <option value="ta-LK">Tamil</option>
+        <option value="te-IN">Telugu</option>
+        <option value="tet-TL">Tetum</option>
+        <option value="tg-TJ">Tajik</option>
+        <option value="th-TH">Thai</option>
+        <option value="ti-TI">Tigrinya</option>
+        <option value="tk-TM">Turkmen</option>
+        <option value="tl-PH">Tagalog</option>
+        <option value="tn-BW">Tswana</option>
+        <option value="to-TO">Tongan</option>
+        <option value="tr-TR">Turkish</option>
+        <option value="uk-UA">Ukrainian</option>
+        <option value="uz-UZ">Uzbek</option>
+        <option value="vi-VN">Vietnamese</option>
+        <option value="wo-SN">Wolof</option>
+        <option value="xh-ZA">Xhosa</option>
+        <option value="yi-YD">Yiddish</option>
+        <option value="zu-ZA">Zulu</option>
+</select>
+
+            <h3 class="bi bi-clipboard icon none"></h3>
+
+        </row>
+        <button class="button" type="submit">Translate</button>
+    </form>
+    <footer>
+        <row>
+            <a target="_blank" href="https://www.facebook.com/abdulahad.ansari.1481/">
+                <h2 class="bi bi-facebook"></h2>
+            </a>
+            <a target="_blank" href="https://github.com/ahadsts9901">
+                <h2 class="bi bi-github"></h2>
+            </a>
+            <a target="_blank" href="https://linkedin.com/in/muhammad-ahad-3136b1236">
+                <h2 class="bi bi-linkedin"></h2>
+            </a>
+            <a target="_blank" href="https://wa.me/+923130019086">
+                <h2 class="bi bi-whatsapp"></h2>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@AhadSTS/">
+                <h2 class="bi bi-youtube"></h2>
+            </a>
+        </row>
+        <p class="center">Thanks For Visiting Regards! Muhammad Ahad&copy;</p>
+    </footer>
+    <!-- javascript -->
+    <script src="./main.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
