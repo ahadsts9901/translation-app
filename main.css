@@ -5,8 +5,8 @@
 }
 
 body {
-    /* background-color: #212121; */
-    color: #6770f9;
+    background-color: #06283d;
+    color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -25,13 +25,14 @@ form {
     row-gap: 0em;
     padding: 0em;
     margin: 0em;
-    border: 2px solid #212121;
+    border: 2px solid 06283d;
+    background-color: #fff;
     border-radius: 20px;
     width: 90%;
 }
 
 a {
-    color: #212121;
+    color: #fff;
 }
 
 row {
@@ -63,10 +64,10 @@ column {
 
 .input-1 {
     padding: 1em;
-    border-top: 0px solid #212121;
-    border-bottom: 2px solid #212121;
-    border-right: 2px solid #212121;
-    border-left: 0px solid #212121;
+    border-top: 0px solid #06283d;
+    border-bottom: 3px solid #06283d;
+    border-right: 3px solid #06283d;
+    border-left: 0px solid #06283d;
     border-top-left-radius: 20px;
     width: 100%;
     height: 10em;
@@ -78,14 +79,15 @@ column {
 
 .input-2 {
     padding: 1em;
-    border-top: 0px solid #212121;
-    border-bottom: 2px solid #212121;
-    border-right: 0px solid #212121;
-    border-left: 0px solid #212121;
+    border-top: 0px solid #06283d;
+    border-bottom: 3px solid #06283d;
+    border-right: 0px solid #06283d;
+    border-left: 0px solid #06283d;
     border-top-right-radius: 20px;
     width: 100%;
     height: 10em;
     font-size: 1em;
+    background-color: #fff;
 }
 
 ::placeholder {
@@ -104,13 +106,13 @@ column {
 select {
     border: 0em;
     text-align: left;
-    color: #6770f9;
+    color: 06283d;
     background-color: #fff;
 }
 
 .button {
     color: #fff;
-    background-color: #6770f9;
+    background-color: #06283d;
     width: 70%;
     height: 3em;
     border: 0px;
@@ -124,17 +126,7 @@ select {
 }
 
 .button:active {
-    background-color: #4e59ff;
-}
-
-.check {
-    background-color: #fff;
-    border: 1px solid #212121;
-}
-
-.check:checked {
-    background-color: #212121;
-    border: 1px solid #fff;
+    background-color: #003f66;
 }
 
 .center {
@@ -157,10 +149,10 @@ footer {
     }
     .input-1 {
         padding: 1em;
-        border-top: 0px solid #212121;
-        border-bottom: 1px solid #212121;
-        border-right: 0px solid #212121;
-        border-left: 0px solid #212121;
+        border-top: 0px solid #06283d;
+        border-bottom: 2px solid #06283d;
+        border-right: 0px solid #06283d;
+        border-left: 0px solid #06283d;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
         width: 100%;
@@ -172,10 +164,11 @@ footer {
     }
     .input-2 {
         padding: 1em;
-        border-top: 0px solid #212121;
-        border-bottom: 1px solid #212121;
-        border-right: 0px solid #212121;
-        border-left: 0px solid #212121;
+        border-top: 0px solid #06283d;
+        border-bottom: 2px solid #06283d;
+        border-right: 0px solid #06283d;
+        border-left: 0px solid #06283d;
+        border-radius: 0px;
         width: 100%;
         height: 10em;
         font-size: 1em;
