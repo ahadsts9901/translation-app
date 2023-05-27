@@ -25,10 +25,10 @@ form {
     row-gap: 0em;
     padding: 0em;
     margin: 0em;
-    border: 2px solid 06283d;
+    border: 3px solid #06283d;
     background-color: #fff;
     border-radius: 20px;
-    width: 90%;
+    width: 100%;
 }
 
 a {
@@ -58,8 +58,20 @@ column {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 0.5em;
+    padding: 0em;
     row-gap: 1em;
+}
+
+.white {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    row-gap: 1em;
+    background-color: #fff;
+    border-radius: 25px;
+    width: 90%;
 }
 
 .input-1 {
@@ -146,6 +158,9 @@ footer {
 @media only screen and (max-width: 515px) {
     row-nogap {
         flex-direction: column;
+    }
+    form {
+        border: 2px solid #06283d;
     }
     .input-1 {
         padding: 1em;

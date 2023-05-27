@@ -29,15 +29,15 @@
 
     <h1 class="center" style="font-weight: bold;">Translation App</h1>
     <p class="center">You Can Translate Any Language</p>
-
-    <form onsubmit="translateText(event)">
-        <row-nogap>
-            <textarea id="user-input" class="input-1" placeholder="From"></textarea>
-            <p id="user-output" class="input-2 icon" style="color: #212121;"><i style="color: #9b9b9b; font-style: normal;">To</i></p>
-        </row-nogap>
-        <row>
-            <h3 class="bi bi-clipboard icon none"></h3>
-            <select id="source-language">
+    <div class="white">
+        <form onsubmit="translateText(event)">
+            <row-nogap>
+                <textarea id="user-input" class="input-1" placeholder="From"></textarea>
+                <p id="user-output" class="input-2 icon" style="color: #212121;"><i style="color: #9b9b9b; font-style: normal;">To</i></p>
+            </row-nogap>
+            <row>
+                <h3 class="bi bi-clipboard icon none"></h3>
+                <select id="source-language">
         <option value="en-GB" selected>English</option>
         <option value="ur-PK">Urdu</option>
         <option value="hi-IN">Hindi</option>
@@ -137,9 +137,9 @@
 <option value="zu-ZA">Zulu</option>
 </select>
 
-            <h3 class="bi bi-arrow-left-right icon"></h3>
+                <h3 class="bi bi-arrow-left-right icon"></h3>
 
-            <select id="target-language">
+                <select id="target-language">
                 <option value="en-GB">English</option>
                 <option value="ur-PK" selected>Urdu</option>
                 <option value="hi-IN">Hindi</option>
@@ -239,11 +239,12 @@
         <option value="zu-ZA">Zulu</option>
 </select>
 
-            <h3 class="bi bi-clipboard icon none"></h3>
+                <h3 class="bi bi-clipboard icon none"></h3>
 
-        </row>
-        <button class="button" type="submit">Translate</button>
-    </form>
+            </row>
+            <button class="button" type="submit">Translate</button>
+        </form>
+    </div>
     <footer>
         <row>
             <a target="_blank" href="https://www.facebook.com/abdulahad.ansari.1481/">
