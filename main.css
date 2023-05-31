@@ -109,6 +109,7 @@ column {
 
 .icon {
     margin: 0em;
+    color: #06283d;
 }
 
 .none {
@@ -159,9 +160,11 @@ footer {
     row-nogap {
         flex-direction: column;
     }
+
     form {
         border: 2px solid #06283d;
     }
+
     .input-1 {
         padding: 1em;
         border-top: 0px solid #06283d;
@@ -177,6 +180,7 @@ footer {
         align-items: flex-start;
         font-size: 1em;
     }
+
     .input-2 {
         padding: 1em;
         border-top: 0px solid #06283d;
@@ -188,6 +192,7 @@ footer {
         height: 10em;
         font-size: 1em;
     }
+
     .none {
         display: none;
     }

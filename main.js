@@ -19,3 +19,21 @@ function translateText(event) {
     }
 
 }
+
+function copyInput() {
+
+    var copyText = document.getElementById("user-input");
+
+    copyText.select();
+    copyText.setSelectionRange(0, 99999);
+
+    navigator.clipboard.writeText(copyText.value);
+}
+
+function copyPara() {
+    var copyText = document.getElementById("user-output");
+    var textToCopy = copyText.innerText;
+  
+    navigator.clipboard.writeText(textToCopy);
+  }
+  
