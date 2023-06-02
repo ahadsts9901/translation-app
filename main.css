@@ -107,6 +107,14 @@ column {
     color: #9b9b9b;
 }
 
+.convert-right-left {
+    display: block;
+}
+
+.convert-up-down {
+    display: none;
+}
+
 .icon {
     margin: 0em;
     color: #06283d;
@@ -156,15 +164,20 @@ footer {
     row-gap: 1em;
 }
 
-@media only screen and (max-width: 515px) {
+.mobile {
+    display: none;
+}
+
+@media only screen and (max-width: 650px) {
     row-nogap {
         flex-direction: column;
     }
-
+    row .none {
+        display: none;
+    }
     form {
         border: 2px solid #06283d;
     }
-
     .input-1 {
         padding: 1em;
         border-top: 0px solid #06283d;
@@ -180,7 +193,6 @@ footer {
         align-items: flex-start;
         font-size: 1em;
     }
-
     .input-2 {
         padding: 1em;
         border-top: 0px solid #06283d;
@@ -192,14 +204,44 @@ footer {
         height: 10em;
         font-size: 1em;
     }
+    .mobile {
+        display: block;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 30%;
+    }
+}
 
-    .none {
-        display: none;
+@media only screen and (max-width: 540px) {
+    .mobile {
+        font-size: 0.5em;
     }
 }
 
 @media only screen and (max-width: 420px) {
     select {
         width: 100%;
+    }
+    .convert-right-left {
+        display: none;
+    }
+    .convert-up-down {
+        display: block;
+    }
+    row {
+        flex-direction: column;
+    }
+    .mobile {
+        flex-direction: row;
+    }
+    .mobile row {
+        flex-direction: row;
+    }
+}
+
+@media only screen and (max-width: 380px) {
+    .mobile {
+        column-gap: 0em;
     }
 }
