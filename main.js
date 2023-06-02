@@ -15,7 +15,7 @@ function translateText(event) {
             .then(data => {
                 console.log(data.responseData);
                 output.innerText = data.responseData.translatedText;
-                speakPara(data.responseData.translatedText); // Speak the translated text
+                speakPara(data.responseData.translatedText, to); // Speak the translated text with the target language
             });
     }
 }
@@ -35,23 +35,39 @@ function copyPara() {
 
 function speakInput() {
     var inputText = document.getElementById("user-input").value;
-    speakText(inputText);
+    speakText(inputText, document.getElementById("source-language").value);
 }
 
-function speakPara() {
-    var outputText = document.getElementById("user-output").innerText;
-    speakText(outputText);
+function speakPara(text, lang) {
+    speakText(text, lang);
 }
 
-function speakText(text) {
+function speakText(text, lang) {
     if ('speechSynthesis' in window) {
         var speech = new SpeechSynthesisUtterance();
         speech.text = text;
+        speech.lang = lang;
         speech.volume = 1;
         speech.rate = 1;
         speech.pitch = 1;
+
+        // Select voice for specific languages
+        speech.voice = getVoiceForLanguage(lang);
+
         window.speechSynthesis.speak(speech);
     } else {
         alert('Text-to-speech is not supported in this browser.');
     }
+}
+
+function getVoiceForLanguage(lang) {
+    var voices = speechSynthesis.getVoices();
+    var voice = voices.find(v => v.lang === lang);
+
+    // Fallback to the default voice if the specific language voice is not found
+    if (!voice) {
+        voice = voices.find(v => v.lang === 'default');
+    }
+
+    return voice;
 }
